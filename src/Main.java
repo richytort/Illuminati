@@ -14,18 +14,18 @@ public class Main {
 
         ///create the card image
 
-        JFrame window1 = new JFrame(myDeck.deck.get(11).getName()) ;
+        JFrame window1 = new JFrame(myDeck.deck.get(0).getName()) ;
         window1.setSize(450,300);
         window1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window1.setVisible(true);
         JPanel p1 = new JPanel() ;
-        JLabel cardLabel1 = new JLabel( new ImageIcon(myDeck.deck.get(11).getCardImage()));
+        JLabel cardLabel1 = new JLabel( new ImageIcon(myDeck.deck.get(0).getCardImage()));
         cardLabel1.setSize(400,300);
         p1.add(cardLabel1);
         window1.add(p1);
         window1.setVisible(true);
 
-        /*
+
         JFrame window2 = new JFrame(myDeck.deck.get(1).getName()) ;
         window2.setSize(450,300);
         window2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -119,29 +119,153 @@ public class Main {
         window10.setVisible(true);
         JPanel p10 = new JPanel() ;
         JLabel cardLabel10 = new JLabel (new ImageIcon(myDeck.deck.get(9).getCardImage()));
-        cardLabel9.setSize(400, 300 );
+        cardLabel10.setSize(400, 300 );
         p10.add(cardLabel10);
         window10.add(p10);
         window10.setVisible(true);
-        */
 
+        JFrame window11 = new JFrame(myDeck.deck.get(10).getName());
+        window11.setSize( 450, 300);
+        window11.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window11.setVisible(true);
+        JPanel p11 = new JPanel() ;
+        JLabel cardLabel11 = new JLabel (new ImageIcon(myDeck.deck.get(10).getCardImage()));
+        cardLabel1.setSize(400, 300 );
+        p11.add(cardLabel11);
+        window11.add(p11);
+        window11.setVisible(true);
 
+        JFrame window12 = new JFrame(myDeck.deck.get(11).getName());
+        window12.setSize( 450, 300);
+        window12.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window12.setVisible(true);
+        JPanel p12 = new JPanel() ;
+        JLabel cardLabel12 = new JLabel (new ImageIcon(myDeck.deck.get(11).getCardImage()));
+        cardLabel12.setSize(400, 300 );
+        p12.add(cardLabel12);
+        window12.add(p12);
+        window12.setVisible(true);
 
+        JFrame window13 = new JFrame(myDeck.deck.get(12).getName());
+        window13.setSize( 450, 300);
+        window13.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window13.setVisible(true);
+        JPanel p13 = new JPanel() ;
+        JLabel cardLabel13 = new JLabel (new ImageIcon(myDeck.deck.get(12).getCardImage()));
+        cardLabel13.setSize(400, 300 );
+        p13.add(cardLabel13);
+        window13.add(p13);
+        window13.setVisible(true);
 
+        JFrame window14 = new JFrame(myDeck.deck.get(13).getName());
+        window14.setSize( 450, 300);
+        window14.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window14.setVisible(true);
+        JPanel p14 = new JPanel() ;
+        JLabel cardLabel14 = new JLabel (new ImageIcon(myDeck.deck.get(13).getCardImage()));
+        cardLabel14.setSize(400, 300 );
+        p14.add(cardLabel14);
+        window14.add(p14);
+        window14.setVisible(true);
 
+        JFrame window15 = new JFrame(myDeck.deck.get(14).getName());
+        window15.setSize( 450, 300);
+        window15.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window15.setVisible(true);
+        JPanel p15 = new JPanel() ;
+        JLabel cardLabel15 = new JLabel (new ImageIcon(myDeck.deck.get(14).getCardImage()));
+        cardLabel15.setSize(400, 300 );
+        p15.add(cardLabel15);
+        window15.add(p15);
+        window15.setVisible(true);
 
+        JFrame window16 = new JFrame(myDeck.deck.get(15).getName());
+        window16.setSize( 450, 300);
+        window16.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window16.setVisible(true);
+        JPanel p16 = new JPanel() ;
+        JLabel cardLabel16 = new JLabel (new ImageIcon(myDeck.deck.get(15).getCardImage()));
+        cardLabel16.setSize(400, 300 );
+        p16.add(cardLabel16);
+        window16.add(p16);
+        window16.setVisible(true);
 
+        JFrame window17 = new JFrame(myDeck.deck.get(16).getName());
+        window17.setSize( 450, 300);
+        window17.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window17.setVisible(true);
+        JPanel p17 = new JPanel() ;
+        JLabel cardLabel17 = new JLabel (new ImageIcon(myDeck.deck.get(16).getCardImage()));
+        cardLabel17.setSize(400, 300 );
+        p17.add(cardLabel17);
+        window17.add(p17);
+        window17.setVisible(true);
 
+        JFrame window18 = new JFrame(myDeck.deck.get(17).getName());
+        window18.setSize( 450, 300);
+        window18.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window18.setVisible(true);
+        JPanel p18 = new JPanel() ;
+        JLabel cardLabel18 = new JLabel (new ImageIcon(myDeck.deck.get(17).getCardImage()));
+        cardLabel18.setSize(400, 300 );
+        p18.add(cardLabel18);
+        window18.add(p18);
+        window18.setVisible(true);
 
+        JFrame window19 = new JFrame(myDeck.deck.get(18).getName());
+        window19.setSize( 450, 300);
+        window19.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window19.setVisible(true);
+        JPanel p19 = new JPanel() ;
+        JLabel cardLabel19 = new JLabel (new ImageIcon(myDeck.deck.get(18).getCardImage()));
+        cardLabel19.setSize(400, 300 );
+        p19.add(cardLabel19);
+        window19.add(p19);
+        window19.setVisible(true);
 
+        JFrame window20 = new JFrame(myDeck.deck.get(19).getName());
+        window20.setSize( 450, 300);
+        window20.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window20.setVisible(true);
+        JPanel p20 = new JPanel() ;
+        JLabel cardLabel20 = new JLabel (new ImageIcon(myDeck.deck.get(19).getCardImage()));
+        cardLabel20.setSize(400, 300 );
+        p20.add(cardLabel20);
+        window20.add(p20);
+        window20.setVisible(true);
 
+        JFrame window21 = new JFrame(myDeck.deck.get(20).getName());
+        window21.setSize( 450, 300);
+        window21.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window21.setVisible(true);
+        JPanel p21 = new JPanel() ;
+        JLabel cardLabel21 = new JLabel (new ImageIcon(myDeck.deck.get(20).getCardImage()));
+        cardLabel21.setSize(400, 300 );
+        p21.add(cardLabel21);
+        window21.add(p21);
+        window21.setVisible(true);
 
+        JFrame window22 = new JFrame(myDeck.deck.get(21).getName());
+        window22.setSize( 450, 300);
+        window22.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window22.setVisible(true);
+        JPanel p22 = new JPanel() ;
+        JLabel cardLabel22 = new JLabel (new ImageIcon(myDeck.deck.get(21).getCardImage()));
+        cardLabel22.setSize(400, 300 );
+        p22.add(cardLabel22);
+        window22.add(p22);
+        window22.setVisible(true);
 
-
-
-
-
-
+        JFrame window23 = new JFrame(myDeck.deck.get(22).getName());
+        window23.setSize( 450, 300);
+        window23.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window23.setVisible(true);
+        JPanel p23 = new JPanel() ;
+        JLabel cardLabel23 = new JLabel (new ImageIcon(myDeck.deck.get(22).getCardImage()));
+        cardLabel23.setSize(400, 300 );
+        p23.add(cardLabel23);
+        window23.add(p23);
+        window23.setVisible(true);
 
     }
 }
