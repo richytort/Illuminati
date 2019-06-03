@@ -5,8 +5,8 @@ public class SpecialCard extends Card {
     private String ability ;
     private String type ;
 
-    SpecialCard(String name , BufferedImage cardImage , String ability){
-        super( name , cardImage ) ;
+    SpecialCard(String name , BufferedImage frontCardImage , BufferedImage backCardImage , String ability){
+        super( name , frontCardImage , backCardImage ) ;
         this.ability = ability ;
         this.type = "Special" ;
     }

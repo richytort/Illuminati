@@ -12,9 +12,9 @@ public class IlluminatiCard extends Card{
     private boolean right ;
     private boolean bottom ;
 
-    public IlluminatiCard(String name , BufferedImage cardImage ,  String type, String ability, int power, int tPower, int income, boolean top, boolean left,
+    public IlluminatiCard(String name , BufferedImage frontCardImage , BufferedImage backCardImage ,  String type, String ability, int power, int tPower, int income, boolean top, boolean left,
                           boolean right, boolean bottom) {
-        super(name, cardImage);
+        super(name, frontCardImage, backCardImage );
         this.type = type;
         this.ability = ability;
         this.power = power;
