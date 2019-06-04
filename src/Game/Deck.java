@@ -1,6 +1,7 @@
-package Cards;
-
+package Game;
 import Cards.Card;
+import Cards.IlluminatiCard;
+import Cards.SpecialCard;
 
 import java.io.File;
 import java.io.IOException;

@@ -1,7 +1,6 @@
 package Tester;
-import Cards.* ;
 
-import Cards.Deck;
+import Game.Deck;
 
 import java.io.IOException;
 import javax.swing.ImageIcon;

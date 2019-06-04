@@ -1,7 +1,5 @@
 package Cards;
 
-import Cards.Card;
-
 import java.awt.image.BufferedImage;
 
 public class IlluminatiCard extends Card {
