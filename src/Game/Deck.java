@@ -75,5 +75,29 @@ public class Deck {
         otherGroups  oTemp =  new otherGroups("American Autoduel Association",ImageIO.read(new File("AmericanAutoDuelAssociation.png")) , ImageIO.read(new File("RegBack.png")),
                 "other groups","none",1,0,5,1,true,false,false,true,false,false,align);
         this.deck.add(oTemp);
+        ArrayList<String> align2 = new ArrayList<String>();
+        align2.add("Libera;");
+        oTemp =  new otherGroups("Anti-Nuclear Activists",ImageIO.read(new File("AntiNuclearActivist.png")) , ImageIO.read(new File("RegBack.png")),
+                "other groups","+2 on any attempt to destroy Nuclear Power Companies.",2,0,5,1,true,false,false,false,true,false,align2);
+        this.deck.add(oTemp);
+        ArrayList<String> align3 = new ArrayList<String>();
+        align3.add("Peaceful");
+        align3.add("Liberal");
+        oTemp =  new otherGroups("Antiwar Activists",ImageIO.read(new File("AntiwarActivist.png")) , ImageIO.read(new File("RegBack.png")),
+                "other groups","none",0,0,3,1,true,false,false,false,false,false,align3);
+        this.deck.add(oTemp);
+        ArrayList<String> align4 = new ArrayList<String>();
+        align4.add("Liberal");
+        align4.add("Straight");
+        oTemp =  new otherGroups("Big Media",ImageIO.read(new File("bigMedia.png")) , ImageIO.read(new File("RegBack.png")),
+                "other groups","none",4,3,6,3,false,true,true,false,true,true,align4);
+        this.deck.add(oTemp);
+        ArrayList<String> align5 = new ArrayList<String>();
+        align5.add("Straight");
+        align5.add("Peaceful");
+        oTemp =  new otherGroups("Boy Sprouts",ImageIO.read(new File("boySprouts.png")) , ImageIO.read(new File("RegBack.png")),
+                "other groups","none",0,0,3,1,true,false,false,false,false,false,align5);
+        this.deck.add(oTemp);
+
     }
 }

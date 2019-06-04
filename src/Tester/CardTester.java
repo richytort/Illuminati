@@ -18,7 +18,7 @@ public class CardTester {
 
         ///create the card image
 
-        JFrame window1 = new JFrame(myDeck.deck.get(21).getName()) ;
+        JFrame window1 = new JFrame(myDeck.deck.get(20).getName()) ;
         window1.setSize(450,330);
         window1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window1.setVisible(true);
@@ -272,6 +272,17 @@ public class CardTester {
         p23.add(cardLabel23);
         window23.add(p23);
         window23.setVisible(true);
+
+        JFrame window24 = new JFrame(myDeck.deck.get(23).getName());
+        window24.setSize( 450, 330);
+        window24.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window24.setVisible(true);
+        JPanel p24 = new JPanel() ;
+        JLabel cardLabel24 = new JLabel (new ImageIcon(myDeck.deck.get(23).getFrontCardImage()));
+        cardLabel24.setSize(425, 325 );
+        p24.add(cardLabel24);
+        window24.add(p24);
+        window24.setVisible(true);
 
     }
 }

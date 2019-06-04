@@ -159,9 +159,9 @@ public class otherGroups extends Card {
 
     @Override
     public String toString() {
-        return "Cards.otherGroups name=" + super.toString() + "type= " + type + ", ability=" + ability + ", power=" + power + ", tPower=" + tpower
-                + ", income=" + income +  ", leftIn=" + leftIn + ", leftOut =" + leftOut +
-                ", rightIn =" + rightIn + ", rightOut =" + rightOut + ", top=" + top + ", bottom=" + bottom
+        return "Cards.otherGroups name= " + super.toString() + "type = " + type + ", ability = " + ability + ", power = " + power + ", tPower = " + tpower
+                + ", income = " + income +  ", leftIn= " + leftIn + ", leftOut = " + leftOut +
+                ", rightIn = " + rightIn + ", rightOut = " + rightOut + ", top = " + top + ", bottom = " + bottom
                 + " ,aligment = " + alignment + "";
 
     }
