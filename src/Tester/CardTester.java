@@ -28,7 +28,7 @@ public class CardTester {
         p1.add(cardLabel1);
         window1.add(p1);
         window1.setVisible(true);
-/*
+
         JFrame window2 = new JFrame(myDeck.deck.get(0).getName()) ;
         window2.setSize(450,330);
         window2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -272,6 +272,6 @@ public class CardTester {
         p23.add(cardLabel23);
         window23.add(p23);
         window23.setVisible(true);
-*/
+
     }
 }
