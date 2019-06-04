@@ -35,6 +35,7 @@ public class otherGroups extends Card {
         this.leftOut = leftOut;
         this.top = top;
         this.bottom = bottom;
+        this.alingment = new ArrayList<String>();
     }
     public String getType() {
 
@@ -143,12 +144,24 @@ public class otherGroups extends Card {
 
         this.bottom = bottom;
     }
+    public void setAlingment(String alig){
+        this.alingment.add(alig);
+    }
+
+    public String getAlignments() {
+        String alignt = "";
+        for (String e : alingment) {
+           alignt+= e;
+        }return alignt;
+    }
+
     @Override
     public String toString() {
         return "Cards.otherGroups name=" + super.toString() + "type= " + type + ", ability=" + ability + ", power=" + power + ", tPower=" + tpower
                 + ", income=" + income +  ", leftIn=" + leftIn + ", leftOut =" + leftOut +
                 ", rightIn =" + rightIn + ", rightOut =" + rightOut + ", top=" + top + ", bottom=" + bottom
-                +  "";
+                + " ,aligment = " + getAlignments() + "";
+
     }
 
 }
