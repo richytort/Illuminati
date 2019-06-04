@@ -2,6 +2,7 @@ package Game;
 import Cards.Card;
 import Cards.IlluminatiCard;
 import Cards.SpecialCard;
+import Cards.otherGroups;
 
 import java.io.File;
 import java.io.IOException;
@@ -68,7 +69,11 @@ public class Deck {
         sTemp = new SpecialCard("White Collar Crime" , ImageIO.read(new File("WhiteCollarCrime.png")) , ImageIO.read(new File("RegBack.png")),"Play this card at any time to reorganize all your money freely -- that is, any amount(s) may be moved between any groups. You also get an extra 5MB which may be placed anywere");
         this.deck.add(sTemp);
 
-
-
+        ArrayList<String> align = new ArrayList<String>();
+        align.add("Violent");
+        align.add("Weird");
+        otherGroups  oTemp =  new otherGroups("American Autoduel Association",ImageIO.read(new File("AmericanAutoDuelAssociation.png")) , ImageIO.read(new File("RegBack.png")),
+                "other groups","none",1,0,5,1,true,false,false,true,false,false,align);
+        this.deck.add(oTemp);
     }
 }

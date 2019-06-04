@@ -18,7 +18,7 @@ public class CardTester {
 
         ///create the card image
 
-        JFrame window1 = new JFrame(myDeck.deck.get(20).getName()) ;
+        JFrame window1 = new JFrame(myDeck.deck.get(21).getName()) ;
         window1.setSize(450,330);
         window1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window1.setVisible(true);

@@ -16,11 +16,11 @@ public class otherGroups extends Card {
     private boolean rightOut;
     private boolean top;
     private boolean bottom;
-    protected ArrayList<String> alingment;
+    private ArrayList<String> alignment;
 
-    otherGroups(String name, BufferedImage frontCardImage, BufferedImage backCardImage, String type, String ability,
+    public otherGroups(String name, BufferedImage frontCardImage, BufferedImage backCardImage, String type, String ability,
                 int power, int tpower, int resistance, int income,boolean leftIn, boolean leftOut, boolean rightIn,
-                boolean rightOut, boolean top, boolean bottom){
+                boolean rightOut, boolean top, boolean bottom, ArrayList<String> alignment){
         super(name, frontCardImage, backCardImage );
         this.type = type;
         this.ability = ability;
@@ -35,8 +35,10 @@ public class otherGroups extends Card {
         this.leftOut = leftOut;
         this.top = top;
         this.bottom = bottom;
-        this.alingment = new ArrayList<String>();
+        this.alignment = alignment;
+
     }
+
     public String getType() {
 
         return type;
@@ -144,13 +146,13 @@ public class otherGroups extends Card {
 
         this.bottom = bottom;
     }
-    public void setAlingment(String alig){
-        this.alingment.add(alig);
+    public void setAlignment(String alig){
+        this.alignment.add(alig);
     }
 
     public String getAlignments() {
         String alignt = "";
-        for (String e : alingment) {
+        for (String e : alignment) {
            alignt+= e;
         }return alignt;
     }
@@ -160,7 +162,7 @@ public class otherGroups extends Card {
         return "Cards.otherGroups name=" + super.toString() + "type= " + type + ", ability=" + ability + ", power=" + power + ", tPower=" + tpower
                 + ", income=" + income +  ", leftIn=" + leftIn + ", leftOut =" + leftOut +
                 ", rightIn =" + rightIn + ", rightOut =" + rightOut + ", top=" + top + ", bottom=" + bottom
-                + " ,aligment = " + getAlignments() + "";
+                + " ,aligment = " + alignment + "";
 
     }
 
