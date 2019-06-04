@@ -98,6 +98,14 @@ public class Deck {
         oTemp =  new otherGroups("Boy Sprouts",ImageIO.read(new File("boySprouts.png")) , ImageIO.read(new File("RegBack.png")),
                 "other groups","none",0,0,3,1,true,false,false,false,false,false,align5);
         this.deck.add(oTemp);
+        ArrayList<String> align6 = new ArrayList<String>();
+        align6.add("Liberal");
+        align6.add("Weird");
+        align6.add("Government");
+        oTemp =  new otherGroups("California",ImageIO.read(new File("california.png")) , ImageIO.read(new File("RegBack.png")),
+                "other groups","none",5,0,4,5,true,false,false,false,true,true,align6);
+        this.deck.add(oTemp);
+
 
     }
 }
