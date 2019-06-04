@@ -1,10 +1,15 @@
+package Tester;
+import Cards.* ;
+
+import Cards.Deck;
+
 import java.io.IOException;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class Main {
+public class CardTester {
 
     public static void main(String[] args) throws IOException {
         Deck myDeck = new Deck() ;
@@ -24,7 +29,7 @@ public class Main {
         p1.add(cardLabel1);
         window1.add(p1);
         window1.setVisible(true);
-
+/*
         JFrame window2 = new JFrame(myDeck.deck.get(0).getName()) ;
         window2.setSize(450,330);
         window2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -268,6 +273,6 @@ public class Main {
         p23.add(cardLabel23);
         window23.add(p23);
         window23.setVisible(true);
-
+*/
     }
 }
