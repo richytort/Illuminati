@@ -1,3 +1,5 @@
+package Cards;
+
 import java.awt.image.BufferedImage;
 
 public class SpecialCard extends Card {
@@ -5,7 +7,7 @@ public class SpecialCard extends Card {
     private String ability ;
     private String type ;
 
-    SpecialCard(String name , BufferedImage frontCardImage , BufferedImage backCardImage , String ability){
+    public SpecialCard(String name , BufferedImage frontCardImage , BufferedImage backCardImage , String ability){
         super( name , frontCardImage , backCardImage ) ;
         this.ability = ability ;
         this.type = "Special" ;
@@ -20,6 +22,6 @@ public class SpecialCard extends Card {
     }
 
     public String toString(){
-        return  "Special Card [name=" + super.toString() + "type= " + type + ", ability=" + ability +  "]";
+        return  "Special Cards.Card [name=" + super.toString() + "type= " + type + ", ability=" + ability +  "]";
     }
 }

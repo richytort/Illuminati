@@ -1,10 +1,14 @@
+package Tester;
+
+import Game.Deck;
+
 import java.io.IOException;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class Main {
+public class CardTester {
 
     public static void main(String[] args) throws IOException {
         Deck myDeck = new Deck() ;

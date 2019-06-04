@@ -1,6 +1,8 @@
+package Cards;
+
 import java.awt.image.BufferedImage;
 
-public class IlluminatiCard extends Card{
+public class IlluminatiCard extends Card {
     //instances
     private String type ;
     private String ability ;
@@ -100,7 +102,7 @@ public class IlluminatiCard extends Card{
 
     @Override
     public String toString() {
-        return "IlluminatiCard [name=" + super.toString() + "type= " + type + ", ability=" + ability + ", power=" + power + ", tPower=" + tPower
+        return "Cards.IlluminatiCard [name=" + super.toString() + "type= " + type + ", ability=" + ability + ", power=" + power + ", tPower=" + tPower
                 + ", income=" + income + ", top=" + top + ", left=" + left + ", right=" + right + ", bottom=" + bottom
                 +  "]";
     }
