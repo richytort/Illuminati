@@ -7,6 +7,7 @@ public class Card {
     private String name ;
     private BufferedImage frontCardImage;
     private BufferedImage backCardImage;
+    private String type;
 
     public Card(String name , BufferedImage frontCardImage , BufferedImage backCardImage ) {
         /////////////////////////Maybe this should be null for later see if ability is null, print it has no ability
@@ -21,6 +22,14 @@ public class Card {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     public BufferedImage getFrontCardImage() {

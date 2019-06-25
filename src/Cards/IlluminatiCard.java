@@ -28,13 +28,6 @@ public class IlluminatiCard extends Card {
         this.bottom = bottom;
     }
 
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
 
     public String getAbility() {
         return ability;

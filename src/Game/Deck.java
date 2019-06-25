@@ -7,6 +7,7 @@ import Cards.otherGroups;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList ;
+import java.util.Collections;
 import javax.imageio.ImageIO;
 
 public class Deck {
@@ -344,24 +345,25 @@ public class Deck {
         this.deck.add(oTemp);
 
 
+        }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    //shuffles cards in the deck
+    public void shuffle(){
+        Collections.shuffle(deck);
     }
+
+    public void drawCard(){
+        deck.get(0);
+        deck.remove(0);
+    }
+    public void drawIlluminati(){
+        deck.get(0);
+        deck.remove(0);
+        for(int i = 0; i < deck.size();i++){
+            if(deck.get(i).getType() == "Illuminati"){
+                deck.remove(i);
+            }
+        }
+    }
+
 }

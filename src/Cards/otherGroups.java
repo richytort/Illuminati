@@ -39,15 +39,6 @@ public class otherGroups extends Card {
 
     }
 
-    public String getType() {
-
-        return type;
-    }
-
-    public void setType(String type) {
-
-        this.type = type;
-    }
 
     public String getAbility() {
         return ability;
@@ -162,7 +153,7 @@ public class otherGroups extends Card {
         return "Cards.otherGroups name= " + super.toString() + "type = " + type + ", ability = " + ability + ", power = " + power + ", tPower = " + tpower
                 + ", income = " + income +  ", leftIn= " + leftIn + ", leftOut = " + leftOut +
                 ", rightIn = " + rightIn + ", rightOut = " + rightOut + ", top = " + top + ", bottom = " + bottom
-                + " ,aligment = " + alignment + "";
+                + " ,alignment = " + alignment + "";
 
     }
 
