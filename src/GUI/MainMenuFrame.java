@@ -21,6 +21,12 @@ public class MainMenuFrame extends JFrame{
                 cPF.setVisible(true);
             }
         });
+        startButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
     }
 
     public JPanel getMainMenuPanel(){
