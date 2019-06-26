@@ -585,13 +585,22 @@ public class Deck {
 
 
         this.deck.add(oTemp);
-        ArrayList<String> align = new ArrayList<String>();
-        align66.add("Violent");
-        align66.add("Communist");
-        oTemp= new otherGroups("Robot Sea Monsters ", ImageIO.read(new File("RobotSeaMonsters.png")), ImageIO.read(new File ("RegBack.png")), "other groups", "none",
-                0, 0, 6, 2,false, false, true, false, false, false , align66);
+        ArrayList<String> align81 = new ArrayList<String>();
+        align81.add("Communist");
+        align81.add("Liberal");
+        oTemp= new otherGroups("Underground Newspapers ", ImageIO.read(new File("UndergroundNewspapers.png")), ImageIO.read(new File ("RegBack.png")), "other groups", "none",
+                1, 1, 5, 0,false, false, true, false, true, false , align81);
 
+        this.deck.add(oTemp);
+        ArrayList<String> align82 = new ArrayList<String>();
+        oTemp= new otherGroups("Video Games ", ImageIO.read(new File("VideoGames.png")), ImageIO.read(new File ("RegBack.png")), "other groups", "+3 for direct control of Convenience Stores",
+                2, 0, 3, 7,false, false, true, false, false, true , align82);
 
+        this.deck.add(oTemp);
+        ArrayList<String> align83 = new ArrayList<String>();
+        align83.add("Conservative");
+        oTemp= new otherGroups("Yuppies", ImageIO.read(new File("Yuppies.png")), ImageIO.read(new File ("RegBack.png")), "other groups", "none",
+                1, 1, 4, 5,false, false, true, false, false, true, align83);
 
 
 
