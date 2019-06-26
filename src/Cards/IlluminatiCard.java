@@ -61,7 +61,7 @@ public class IlluminatiCard extends Card {
         this.income = income;
     }
 
-    public boolean isTop() {
+    public boolean getTop() {
         return top;
     }
 
@@ -69,7 +69,7 @@ public class IlluminatiCard extends Card {
         this.top = top;
     }
 
-    public boolean isLeft() {
+    public boolean getLeft() {
         return left;
     }
 
@@ -77,7 +77,7 @@ public class IlluminatiCard extends Card {
         this.left = left;
     }
 
-    public boolean isRight() {
+    public boolean getRight() {
         return right;
     }
 
@@ -85,7 +85,7 @@ public class IlluminatiCard extends Card {
         this.right = right;
     }
 
-    public boolean isBottom() {
+    public boolean getBottom() {
         return bottom;
     }
 

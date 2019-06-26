@@ -7,6 +7,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 
 public class CardTester {
 
@@ -18,17 +19,25 @@ public class CardTester {
 
         ///create the card image
 
-        JFrame window1 = new JFrame(myDeck.deck.get(20).getName()) ;
-        window1.setSize(450,330);
+        JFrame window1 = new JFrame(myDeck.deck.get(0).getName()) ;
+        window1.setSize(1080,1080);
         window1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window1.setVisible(true);
         JPanel p1 = new JPanel() ;
-        JLabel cardLabel1 = new JLabel( new ImageIcon(myDeck.deck.get(20).getFrontCardImage()));
-        cardLabel1.setSize(425,325);
-        p1.add(cardLabel1);
+        p1.setSize(200 , 150);
+        JLabel cardLabel1 = new JLabel( new ImageIcon(myDeck.deck.get(0).getFrontCardImage()));
+        JLabel cardLabel2 = new JLabel( new ImageIcon(myDeck.deck.get(1).getFrontCardImage()));
+        cardLabel1.setSize(50,40);
+        cardLabel2.setSize( 50, 40);
+        JScrollPane pp = new JScrollPane(cardLabel1) ;
+        pp.add(cardLabel2);
+
+        p1.add(pp);
+
         window1.add(p1);
         window1.setVisible(true);
 
+        /*
         JFrame window2 = new JFrame(myDeck.deck.get(0).getName()) ;
         window2.setSize(450,330);
         window2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -778,7 +787,7 @@ public class CardTester {
 
 
 
-
+        */
 
 
     }
