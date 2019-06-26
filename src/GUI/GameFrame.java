@@ -19,7 +19,7 @@ public class GameFrame extends JFrame implements Runnable {
     public GameFrame(Player one , Player two ){
         this.one = one ;
         this.two = two ;
-        this.setTitle("Game!");
+        this.setTitle("Illuminati Game!");
         this.setSize(WIDTH, HEIGHT);
         this.setVisible(true);
 
