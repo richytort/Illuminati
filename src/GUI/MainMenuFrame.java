@@ -3,13 +3,20 @@ package GUI;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import Game.Player;
 
 public class MainMenuFrame extends JFrame{
     private JButton createPlayerButton;
     private JPanel mainMenuPanel;
     private JButton startButton;
+    private JLabel title;
+
+    static protected Player one ;
+    static protected Player two ;
 
     public MainMenuFrame() {
+        one = new Player();
+        two = new Player();
 
         createPlayerButton.addActionListener(new ActionListener() {
             @Override
@@ -23,7 +30,7 @@ public class MainMenuFrame extends JFrame{
         });
         startButton.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent click) {
 
             }
         });
@@ -32,4 +39,6 @@ public class MainMenuFrame extends JFrame{
     public JPanel getMainMenuPanel(){
         return mainMenuPanel;
     }
+
+
 }

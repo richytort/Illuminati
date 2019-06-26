@@ -30,8 +30,11 @@ public class CreatePlayerFrame extends JFrame {
                 JFrame c = (JFrame) SwingUtilities.getRoot(b);
                 c.setVisible(false);
 
-                System.out.println(firstPlayerName.getText());
-                System.out.println(secondPlayerName.getText());
+                MainMenuFrame.one.setName(firstPlayerName.getText());
+                MainMenuFrame.two.setName(secondPlayerName.getText());
+
+                System.out.println(MainMenuFrame.one.getName());
+                System.out.println(MainMenuFrame.two.getName());
             }
         });
     }

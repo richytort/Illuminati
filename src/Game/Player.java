@@ -11,8 +11,9 @@ import Cards.Card;
  */
 public class Player {
     //instance variables
-    private String name ;
+    protected String name ;
     private ArrayList<Card> cards;
+
 
     /**
      * This is the basic constructor for our player class.
@@ -21,6 +22,18 @@ public class Player {
         name = "Default";
         cards = new ArrayList<Card>() ;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
+
+
 
 }
 
