@@ -16,9 +16,16 @@ public class GameFrame extends JFrame implements Runnable {
     private Thread thread ;
     private boolean running = false ;
 
+    private Handler handler ;
+
+
+
     public GameFrame(Player one , Player two ){
         this.one = one ;
         this.two = two ;
+        handler = new Handler();
+        handler.addObject(new GUICard(100, 100, ID.PlayerOneCard));
+        handler.addObject(new GUICard(200, 200, ID.PlayerTwoCard));
         this.setTitle("Illuminati Game!");
         this.setSize(WIDTH, HEIGHT);
         this.setVisible(true);
@@ -76,7 +83,7 @@ public class GameFrame extends JFrame implements Runnable {
         stop();
     }
     private void tick(){
-
+        handler.tick();
     }
 
     private void render(){
@@ -92,6 +99,7 @@ public class GameFrame extends JFrame implements Runnable {
         g.setColor(Color.blue);
         g.fillRect(0,0, WIDTH, HEIGHT);
 
+        handler.render(g);
 
         g.dispose();
         bs.show();
