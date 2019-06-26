@@ -16,7 +16,7 @@ public class MainMenuFrame extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 CreatePlayerFrame cPF = new CreatePlayerFrame() ;
                 cPF.setContentPane(new CreatePlayerFrame().getCreatePlayerPanel() );
-                cPF.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                cPF.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
                 cPF.pack();
                 cPF.setVisible(true);
             }

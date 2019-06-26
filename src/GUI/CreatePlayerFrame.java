@@ -9,11 +9,18 @@ public class CreatePlayerFrame extends JFrame {
     private JPanel createPlayerPanel;
     private JTextField textField1;
     private JTextField textField2;
-    private JButton button1;
-    private JButton button2;
+    private JButton saveButton;
+    private JButton cancelButton;
 
     public CreatePlayerFrame() {
 
+        cancelButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+
+            }
+        });
     }
 
     public JPanel getCreatePlayerPanel(){
