@@ -25,7 +25,11 @@ public class CreatePlayerFrame extends JFrame {
         });
         saveButton.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent click) {
+                Component b = (Component) click.getSource();
+                JFrame c = (JFrame) SwingUtilities.getRoot(b);
+                c.setVisible(false);
+
                 System.out.println(firstPlayerName.getText());
                 System.out.println(secondPlayerName.getText());
             }
