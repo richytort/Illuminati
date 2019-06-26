@@ -1,20 +1,12 @@
 package Tester;
-
-import GUI.MainMenuFrame;
-import Game.Player;
-import javax.swing.*;
+import GUI.MainMenu ;
+import java.io.IOException;
 
 public class MainMenuTester {
     public static void main(String[] args) {
+        MainMenu n = new MainMenu() ;
+        n.setVisible(true);
 
-        MainMenuFrame frame = new MainMenuFrame();
-        frame.setTitle("MainMenu");
-
-        frame.setContentPane(new MainMenuFrame().getMainMenuPanel() );
-
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setVisible(true);
     }
 
 }

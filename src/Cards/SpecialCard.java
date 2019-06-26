@@ -13,18 +13,18 @@ public class SpecialCard extends Card {
         this.type = "Special" ;
     }
 
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
+    /**
+     * gets the special ability of the card
+     * @return the ability
+     */
     public String getAbility() {
         return ability;
     }
 
+    /**
+     * sets the special ability of the card
+     * @param ability - special ability of the card
+     */
     public void setAbility(String ability) {
         this.ability = ability;
     }
