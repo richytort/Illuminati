@@ -327,7 +327,7 @@ public class Deck {
         align43.add("Violent");
         oTemp =  new otherGroups("Loan Sharks",ImageIO.read(new File("loanShark.png")) , ImageIO.read(new File("RegBack.png")),
                 "other groups"," none",5,0,5,6,
-                true,false,false,true,false,false,align43);
+               true,false,false,true,false,false,align43);
         this.deck.add(oTemp);
         ArrayList<String> align44 = new ArrayList<String>();
         align44.add("Conservative");
@@ -441,6 +441,187 @@ public class Deck {
         align59.add("Liberal");
         oTemp= new otherGroups("Phone Breaks ", ImageIO.read(new File("PhoneBreaks.png")), ImageIO.read(new File ("RegBack.png")), "other groups", "+3 on any attempt to control, neutralize, or destroy the phone company ",
                 0, 1, 1, 1,true, false, false, false, false, false ,align59);
+
+
+        this.deck.add(oTemp);
+        ArrayList<String> align60 = new ArrayList<String>();
+        align60.add("Government");
+        oTemp= new otherGroups("Government", ImageIO.read(new File("Government.png")), ImageIO.read(new File ("RegBack.png")), "other groups", "none ",
+                4, 3, 3, 1,false, true, false, false, false, true ,align60);
+
+        this.deck.add(oTemp);
+        ArrayList<String> align61 = new ArrayList<String>();
+        align61.add("Violent");
+        align61.add("Fanatic");
+        oTemp= new otherGroups("Professional Sports ", ImageIO.read(new File("ProfessionalSports.png")), ImageIO.read(new File ("RegBack.png")), "other groups", "none ",
+                2, 0, 4, 3,true, false, false, true, false, true ,align61);
+
+        this.deck.add(oTemp);
+        ArrayList<String> align62 = new ArrayList<String>();
+        align62.add("Weird");
+        oTemp= new otherGroups(" Psychiatrists ", ImageIO.read(new File("Psychiatrists.png")), ImageIO.read(new File ("RegBack.png")), "other groups", "none ",
+                0, 0, 6, 2,false, false, true, false, false, false ,align62);
+
+        this.deck.add(oTemp);
+        ArrayList<String> align63 = new ArrayList<String>();
+        align63.add("Weird");
+        oTemp= new otherGroups("Punk Rockers ", ImageIO.read(new File("PunkRockers.png")), ImageIO.read(new File ("RegBack.png")), "other groups", "none ",
+                0, 0, 4, 1,true, false, false, false, false, false ,align63);
+
+        this.deck.add(oTemp);
+        ArrayList<String> align64 = new ArrayList<String>();
+        align64.add("Liberal");
+        oTemp= new otherGroups("Recyclers ", ImageIO.read(new File("Recyclers.png")), ImageIO.read(new File ("RegBack.png")), "other groups", "Pay 5 MB from this group to draw an extra card on your turn. This is not an action ",
+                2, 0, 2, 3,false, true, true, false, false, false, align64);
+
+        this.deck.add(oTemp);
+        ArrayList<String> align65 = new ArrayList<String>();
+        align65.add("Conservative");
+        oTemp= new otherGroups("Republicans ", ImageIO.read(new File("Republicans.png")), ImageIO.read(new File ("RegBack.png")), "other groups", "none",
+                4, 0, 4, 4,false, true, true, false, true, true, align65);
+
+        this.deck.add(oTemp);
+        ArrayList<String> align66 = new ArrayList<String>();
+        align66.add("Violent");
+        align66.add("Communist");
+        oTemp= new otherGroups("Robot Sea Monsters ", ImageIO.read(new File("RobotSeaMonsters.png")), ImageIO.read(new File ("RegBack.png")), "other groups", "none",
+                0, 0, 6, 2,false, false, true, false, false, false , align66);
+
+        this.deck.add(oTemp);
+        ArrayList<String> align67 = new ArrayList<String>();
+        align67.add("Weird");
+        oTemp= new otherGroups("Science Fiction Fans ", ImageIO.read(new File("ScienceFictionFans.png")), ImageIO.read(new File ("RegBack.png")), "other groups", "+2 on any attempt to control any Weird group",
+                0, 0, 5, 1,true, false, false, false, false, false , align67);
+
+        this.deck.add(oTemp);
+        ArrayList<String> align68 = new ArrayList<String>();
+        align68.add("Criminal");
+        align68.add("Violent");
+        align68.add("Liberal");
+        align68.add("Weird");
+        align68.add("Communist");
+        oTemp= new otherGroups("Semiconscious Liberation Army ", ImageIO.read(new File("SemiconsciousLiberationArmy.png")), ImageIO.read(new File ("RegBack.png")), "other groups", "+1 on any attempt to destroy any group",
+                0, 0, 8, 0,true, false, false, false, false, false , align68);
+
+        this.deck.add(oTemp);
+        ArrayList<String> align69 = new ArrayList<String>();
+        align69.add("Weird");
+        oTemp= new otherGroups("S.M.O.F. ", ImageIO.read(new File("SMOF.png")), ImageIO.read(new File ("RegBack.png")), "other groups", "+5 for direct control of S.F. Fans. +2 for direct control of Trekkies",
+                1, 0, 1, 0,false, false, true, false, false, false , align69);
+
+        this.deck.add(oTemp);
+        ArrayList<String> align70 = new ArrayList<String>();
+        align70.add("Violent");
+        align70.add("Weird");
+        oTemp= new otherGroups("Society for Creative Anarchism ", ImageIO.read(new File("SocietyforCreativeAnarchism.png")), ImageIO.read(new File ("RegBack.png")), "other groups", "none",
+                0, 0, 4, 1,false, false, true, false, false, false , align66);
+
+        this.deck.add(oTemp);
+        ArrayList<String> align71 = new ArrayList<String>();
+        align71.add("Conservative");
+        align71.add("Violent");
+        oTemp= new otherGroups("South American Nazis ", ImageIO.read(new File("SouthAmericanNazis.png")), ImageIO.read(new File ("RegBack.png")), "other groups", "none",
+                4, 0, 6, 2,false, false, true, false, true, true , align71);
+
+        this.deck.add(oTemp);
+        ArrayList<String> align72 = new ArrayList<String>();
+        align72.add("Conservative");
+        align72.add("Violent");
+        align72.add("Fanatic");
+        oTemp= new otherGroups("Survivalists ", ImageIO.read(new File("Survivalists.png")), ImageIO.read(new File ("RegBack.png")), "other groups", "+2 Resistance to all owner's other groups",
+                0, 0, 6, 2,false, false, true, false, false, false , align72);
+
+        this.deck.add(oTemp);
+        ArrayList<String> align73 = new ArrayList<String>();
+        align73.add("Weird");
+        oTemp= new otherGroups("Tabloids", ImageIO.read(new File("Tabloids.png")), ImageIO.read(new File ("RegBack.png")), "other groups", "+3 for direct control of Convenience stores",
+                2, 0, 3, 3,false, false, true, false,  true, false , align73);
+
+        this.deck.add(oTemp);
+        ArrayList<String> align74 = new ArrayList<String>();
+        align74.add("Violent");
+        align74.add("Conservative");
+        align74.add("Government");
+        oTemp= new otherGroups("Texas ", ImageIO.read(new File("Texas.png")), ImageIO.read(new File ("RegBack.png")), "other groups", "none",
+                6, 0, 6, 4,true, false, false, true, true, false , align74);
+
+        this.deck.add(oTemp);
+        ArrayList<String> align75 = new ArrayList<String>();
+        oTemp= new otherGroups("The Phone Company ", ImageIO.read(new File("The Phone Company.png")), ImageIO.read(new File ("RegBack.png")), "other groups", "none",
+                5, 2, 6, 3,true, false, true, true, false, true , align75);
+
+        this.deck.add(oTemp);
+        ArrayList<String> align76 = new ArrayList<String>();
+        align76.add("Liberal");
+        oTemp= new otherGroups("The United Nations ", ImageIO.read(new File("TheUnitedNations.png")), ImageIO.read(new File ("RegBack.png")), "other groups", "none",
+                1, 0, 3, 3,true, false, false, false, false, true , align76);
+
+        this.deck.add(oTemp);
+        ArrayList<String> align77 = new ArrayList<String>();
+        align77.add("Straight");
+        oTemp= new otherGroups("Tobacco & Liquor Companies", ImageIO.read(new File("Tobacco&LiquorCompanies.png")), ImageIO.read(new File ("RegBack.png")), "other groups", "none",
+                4, 0, 3, 3,false, true, true, false, true, false , align77);
+
+        this.deck.add(oTemp);
+        ArrayList<String> align78 = new ArrayList<String>();
+        align78.add("Weird");
+        align78.add("Fanatic");
+        oTemp= new otherGroups("Trekkies", ImageIO.read(new File("Trekkies.png")), ImageIO.read(new File ("RegBack.png")), "other groups", "none",
+                0, 0, 4, 3,false, false, true, false, false, false , align78);
+
+        this.deck.add(oTemp);
+        ArrayList<String> align79 = new ArrayList<String>();
+        align79.add("Liberal");
+        align79.add("Straight");
+        oTemp= new otherGroups("Triliberal Commision ", ImageIO.read(new File("TriliberalComision.png")), ImageIO.read(new File ("RegBack.png")), "other groups", "none",
+                5, 0, 6, 3,false, false, true, false, true, true , align79);
+
+        this.deck.add(oTemp);
+        ArrayList<String> align80 = new ArrayList<String>();
+        align80.add("Straight");
+        align80.add("Fanatic");
+        oTemp= new otherGroups("TV Preachers", ImageIO.read(new File("TVPreachers.png")), ImageIO.read(new File ("RegBack.png")), "other groups", "+3 for direct control of the Moral Minority",
+                3, 0, 6, 4,false, true, true, false, false, true , align80);
+
+
+        this.deck.add(oTemp);
+        ArrayList<String> align81 = new ArrayList<String>();
+        align81.add("Communist");
+        align81.add("Liberal");
+        oTemp= new otherGroups("Underground Newspapers ", ImageIO.read(new File("UndergroundNewspapers.png")), ImageIO.read(new File ("RegBack.png")), "other groups", "none",
+                1, 1, 5, 0,false, false, true, false, true, false , align81);
+
+        this.deck.add(oTemp);
+        ArrayList<String> align82 = new ArrayList<String>();
+        oTemp= new otherGroups("Video Games ", ImageIO.read(new File("VideoGames.png")), ImageIO.read(new File ("RegBack.png")), "other groups", "+3 for direct control of Convenience Stores",
+                2, 0, 3, 7,false, false, true, false, false, true , align82);
+
+        this.deck.add(oTemp);
+        ArrayList<String> align83 = new ArrayList<String>();
+        align83.add("Conservative");
+        oTemp= new otherGroups("Yuppies", ImageIO.read(new File("Yuppies.png")), ImageIO.read(new File ("RegBack.png")), "other groups", "none",
+                1, 1, 4, 5,false, false, true, false, false, true, align83);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
