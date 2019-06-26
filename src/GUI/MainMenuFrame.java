@@ -21,7 +21,6 @@ public class MainMenuFrame extends JFrame{
         two = new Player();
 
 
-
         createPlayerButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -39,7 +38,7 @@ public class MainMenuFrame extends JFrame{
                 JFrame c = (JFrame) SwingUtilities.getRoot(b);
                 c.setVisible(false);
 
-                GameFrame game = new GameFrame( one , two ) ;
+                new GameFrame( one , two ) ;
 
             }
         });
