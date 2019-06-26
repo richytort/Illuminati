@@ -5,6 +5,7 @@ import java.awt.Canvas;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferStrategy;
+import java.util.Random;
 
 public class GameFrame extends JFrame implements Runnable {
     private JPanel panel ;
@@ -24,8 +25,12 @@ public class GameFrame extends JFrame implements Runnable {
         this.one = one ;
         this.two = two ;
         handler = new Handler();
-        handler.addObject(new GUICard(100, 100, ID.PlayerOneCard));
-        handler.addObject(new GUICard(200, 200, ID.PlayerTwoCard));
+        Random r = new Random();
+        for(int i = 0 ; i < 50 ;i++){
+            handler.addObject(new GUICard(r.nextInt(WIDTH), r.nextInt(HEIGHT), ID.PlayerOneCard));
+
+        }
+
         this.setTitle("Illuminati Game!");
         this.setSize(WIDTH, HEIGHT);
         this.setVisible(true);
