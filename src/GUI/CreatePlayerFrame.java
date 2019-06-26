@@ -7,22 +7,13 @@ import java.awt.event.ActionListener;
 public class CreatePlayerFrame extends JFrame {
     private JButton buttonMsg;
     private JPanel createPlayerPanel;
+    private JTextField textField1;
+    private JTextField textField2;
+    private JButton button1;
+    private JButton button2;
 
     public CreatePlayerFrame() {
-        buttonMsg.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(null, "Hello World");
-            }
-        });
-    }
 
-    public static void main(String[] args) {
-        JFrame frame = new JFrame("App");
-        frame.setContentPane(new CreatePlayerFrame().createPlayerPanel );
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setVisible(true);
     }
 
     public JPanel getCreatePlayerPanel(){
