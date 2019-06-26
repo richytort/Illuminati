@@ -26,8 +26,8 @@ public class MainMenu extends JFrame{
        startButton = new JButton("Start") ;
        createPlayerButton = new JButton("Create Player");
 
-        ActionListener startListener = new StartListener() ;
-        startButton.addActionListener( startListener);
+        //ActionListener startListener = new StartListener() ;
+        //startButton.addActionListener( startListener);
 
 
        p.add(createPlayerButton);
@@ -40,26 +40,4 @@ public class MainMenu extends JFrame{
 
     }
 
-    class StartListener implements ActionListener
-    {
-
-        @Override
-        public void actionPerformed(ActionEvent arg0) {
-            //open a different frame with drop menus for the different coffee options
-            p.add(scrollPane); //added this text field. MAYBE PLACE IT SOMEWHEREELSE
-
-            CoffeePurchaseFrame coffeeFrame = new CoffeePurchaseFrame() ;
-
-            coffeeFrame.setVisible(true);
-
-            coffeeFrame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-
-
-            ///////////////////maybe i can place these on the coffee purchase frame after they select done
-            p.add(doneButton);
-            p.revalidate();
-        }
-
-
-    }
 }
