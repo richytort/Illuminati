@@ -10,6 +10,7 @@ public class MainMenuFrame extends JFrame{
     private JPanel mainMenuPanel;
     private JButton startButton;
     private JLabel title;
+    private JButton quitButton;
 
     static protected Player one ;
     static protected Player two ;
@@ -32,6 +33,12 @@ public class MainMenuFrame extends JFrame{
             @Override
             public void actionPerformed(ActionEvent click) {
 
+            }
+        });
+        quitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(1);
             }
         });
     }
