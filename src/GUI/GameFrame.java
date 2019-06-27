@@ -1,11 +1,15 @@
 package GUI;
 
+import Game.Deck;
 import Game.Player;
+import framework.Texture;
+
 import java.awt.Canvas;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
+import java.io.IOException;
 import java.util.Random;
 
 import static GUI.ID.Block;
@@ -21,23 +25,30 @@ public class GameFrame extends JFrame implements Runnable {
     private Player two ;
 
 
-
+    static Texture tex;
 
     private Handler handler ;
 
-
+    private Deck deck ;
 
 
     public GameFrame(Player one , Player two ){
         this.one = one ;
         this.two = two ;
+        try {
+            this.deck = new Deck();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         //handler = new Handler();
         init();
         this.addKeyListener(new KeyInput(this.handler));
         this.addMouseListener(new MouseInput(this.handler));
         this.addMouseMotionListener( new MouseInput(this.handler));
 
-        handler.addObject(new GUICard(WIDTH/2 - 32, HEIGHT /2 -32, ID.PlayerOneCard));
+        handler.addObject(new GUICard(WIDTH/2 - 32, HEIGHT /2 -32, 0, ID.PlayerOneCard));
+        handler.addObject(new GUICard(WIDTH/2 - 0, HEIGHT /2 -0, 1, ID.PlayerOneCard));
+
         //handler.addObject(new GUICard(WIDTH/2 + 64, HEIGHT /2 -32, ID.PlayerTwoCard));
 
 
@@ -50,6 +61,12 @@ public class GameFrame extends JFrame implements Runnable {
     }
 
     public void init(){
+
+        try {
+            tex = new Texture();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         BufferedImageLoader loader = new BufferedImageLoader();
         board = loader.loadImage("Board.png"); //loading the board
@@ -153,6 +170,10 @@ public class GameFrame extends JFrame implements Runnable {
 
             }
         }
+    }
+
+    public static Texture getInstance(){
+        return tex;
     }
 
 }

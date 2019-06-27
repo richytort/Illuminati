@@ -36,7 +36,7 @@ public class Deck {
         temp = new IlluminatiCard("The Bermuda Triangle" , ImageIO.read(new File("BermudaTriangle.png") ) , ImageIO.read(new File("Back.png")) ,"Illuminati" , "May reorganize groups freely at end of turn" , 8, 8, 9, true, true, true, true );
         this.deck.add(temp);
 
-
+        /*
 
         SpecialCard sTemp = new SpecialCard("Assassination" , ImageIO.read(new File( "Assassination.png")), ImageIO.read(new File("RegBack.png")) ,"Play this card immediately after the dice are rolled on any attempt (by any plare) to destroy, control, or neutralize. That roll is immediately changed, retroactivity, to a 2.") ;
         this.deck.add(sTemp);
@@ -605,7 +605,7 @@ public class Deck {
 
 
 
-
+*/
 
 
 

@@ -1,11 +1,13 @@
 package GUI;
 
+import framework.Texture;
+
 import java.awt.*;
 import java.util.Random;
 
 public class Block extends GameObject {
+    Texture tex = GameFrame.getInstance() ;
 
-    Random r = new Random();
 
     public Block(int x, int y, ID id) {
         super(x, y, id);
@@ -21,12 +23,12 @@ public class Block extends GameObject {
 
     public void render(Graphics g) {
         g.setColor(Color.white);
-
-        g.drawRect((int)x, (int)y, 32, 32);
+        /////////THIS SETS THE white border for the squares.
+        g.fillRect((int)x, (int)y, 8, 8);
     }
 
     public Rectangle getBounds(){
-        return new Rectangle(x , y , 32 , 32 );
+        return new Rectangle(x , y , 8 , 8 );
     }
 
 
