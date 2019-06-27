@@ -14,7 +14,7 @@ public class MouseInput extends MouseAdapter {
         this.handler = handler;
     }
     public void mousePressed( MouseEvent e){
-        System.out.println("Click!");
+        System.out.println("Clicked");
         x = e.getX();
         y = e.getY();
 
@@ -24,7 +24,6 @@ public class MouseInput extends MouseAdapter {
     }
 
     public void mouseReleased(MouseEvent e){
-        System.out.println("Unclick!");
         for(int i = 0 ; i < handler.object.size(); i++){
             GameObject tempObject = handler.object.get(i);
 
@@ -43,14 +42,14 @@ public class MouseInput extends MouseAdapter {
     }
 
     public void mouseDragged(MouseEvent e){
+        System.out.println("DRAGGD");
         for(int i = 0 ; i < handler.object.size(); i++){
             GameObject tempObject = handler.object.get(i);
-
+            System.out.println("CHECK");
             if(tempObject.getId() == ID.PlayerOneCard) {
                 //key events for player 1
                 if (       ( e.getX() <= tempObject.getX() + 32  && e.getX() >= tempObject.getX()  )
                         && ( e.getY() <= tempObject.getY() + 32  && e.getY() >= tempObject.getY()  ) ) {
-                    System.out.println("MouseDragged" );
 
                     tempObject.setX(e.getX() - 16);
                     tempObject.setY(e.getY() -16);

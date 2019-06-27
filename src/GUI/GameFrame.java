@@ -12,24 +12,27 @@ public class GameFrame extends JFrame implements Runnable {
     private Player one;
     private Player two ;
 
-    private final int WIDTH = 1080, HEIGHT = WIDTH / 12 * 9 ;
+    protected static final int WIDTH = 1080;
+    protected static final int HEIGHT = WIDTH / 12 * 9 ;
 
     private Thread thread ;
     private boolean running = false ;
 
     private Handler handler ;
+    Random r = new Random();
 
 
 
     public GameFrame(Player one , Player two ){
         this.one = one ;
         this.two = two ;
-        handler = new Handler();
-        this.addKeyListener(new KeyInput(handler));
-        this.addMouseListener(new MouseInput(handler));
-        this.addMouseMotionListener( new MouseInput(handler));
+        //handler = new Handler();
+        init();
+        this.addKeyListener(new KeyInput(this.handler));
+        this.addMouseListener(new MouseInput(this.handler));
+        this.addMouseMotionListener( new MouseInput(this.handler));
 
-        handler.addObject(new GUICard(WIDTH/2 - 32, HEIGHT /2 -32, ID.PlayerOneCard));
+        //handler.addObject(new GUICard(WIDTH/2 - 32, HEIGHT /2 -32, ID.PlayerOneCard));
         //handler.addObject(new GUICard(WIDTH/2 + 64, HEIGHT /2 -32, ID.PlayerTwoCard));
 
 
@@ -41,12 +44,20 @@ public class GameFrame extends JFrame implements Runnable {
         this.start();
     }
 
+    public void init(){
+        handler = new Handler();
+        for(int i = 0 ; i < 50 ; i++)
+            handler.addObject(new GUICard(r.nextInt(800), r.nextInt(600), ID.PlayerOneCard));
 
+        handler.createBoard();
+    }
 
     public synchronized void start(){
+        if(running)
+            return;
+        running = true ;
         thread = new Thread(this);
         thread.start() ;
-        running = true ;
     }
 
     public synchronized void stop(){
@@ -60,6 +71,8 @@ public class GameFrame extends JFrame implements Runnable {
 
     public void run()
     {
+        //init();
+        this.requestFocus();
         long lastTime = System.nanoTime();
         double amountOfTicks = 60.0;
         double ns = 1000000000 / amountOfTicks;
@@ -83,7 +96,7 @@ public class GameFrame extends JFrame implements Runnable {
             if(System.currentTimeMillis() - timer > 1000)
             {
                 timer += 1000;
-                //System.out.println("FPS: "+ frames);
+                System.out.println("FPS: "+ frames);
                 frames = 0;
             }
         }
@@ -101,12 +114,14 @@ public class GameFrame extends JFrame implements Runnable {
         }
 
         Graphics g = bs.getDrawGraphics();
-
+        ///////////////////////////////////DRAW UNDER
         g.setColor(Color.blue);
         g.fillRect(0,0, WIDTH, HEIGHT);
 
         handler.render(g);
 
+
+        /////////////////////////////////////DRAW UPPER
         g.dispose();
         bs.show();
     }
