@@ -7,6 +7,8 @@ import java.awt.*;
 import java.awt.image.BufferStrategy;
 import java.util.Random;
 
+import static GUI.ID.Block;
+
 public class GameFrame extends JFrame implements Runnable {
     private JPanel panel ;
     private Player one;
@@ -46,9 +48,9 @@ public class GameFrame extends JFrame implements Runnable {
 
     public void init(){
         handler = new Handler();
-        for(int i = 0 ; i < 50 ; i++)
-            handler.addObject(new GUICard(r.nextInt(800), r.nextInt(600), ID.PlayerOneCard));
-
+        //for(int i = 0 ; i < 50 ; i++)
+        //    handler.addObject(new Block(r.nextInt(800), r.nextInt(600), ID.Block));
+        handler.addObject(new GUICard(r.nextInt(800), r.nextInt(600), ID.PlayerOneCard));
         handler.createBoard();
     }
 

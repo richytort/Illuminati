@@ -33,8 +33,8 @@ public class Handler {
     }
 
     public void createBoard(){
-        for(int xx = 0 ; xx < GameFrame.WIDTH + 64; xx++){
-            addObject(new GUICard(xx, GameFrame.HEIGHT - 64 , ID.PlayerOneCard ));
+        for(int xx = 0 ; xx < GameFrame.WIDTH + 64; xx+= 32){
+            addObject(new Block(xx, GameFrame.HEIGHT - 64 , ID.Block ));
 
         }
 
