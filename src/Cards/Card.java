@@ -15,6 +15,7 @@ public class Card {
     private BufferedImage frontCardImage;
     private BufferedImage backCardImage;
     private String type;
+    private Integer income;
 
     /**
      * This is our constructor for this class. It takes in overloaded parameters of certain types to create a card.
@@ -67,6 +68,11 @@ public class Card {
 
     public void setBackCardImage(BufferedImage backCardImage) {
         this.backCardImage = backCardImage;
+    }
+
+    public int getIncome() {
+
+        return income;
     }
 
     @Override

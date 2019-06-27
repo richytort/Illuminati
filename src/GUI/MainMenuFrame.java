@@ -45,6 +45,7 @@ public class MainMenuFrame extends JFrame{
         quitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
                 System.exit(1);
             }
         });

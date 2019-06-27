@@ -67,10 +67,6 @@ public class otherGroups extends Card {
         this.tpower = tpower;
     }
 
-    public int getIncome() {
-
-        return income;
-    }
 
     public void setIncome(int income) {
 

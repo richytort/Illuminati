@@ -53,9 +53,6 @@ public class IlluminatiCard extends Card {
         this.tPower = tPower;
     }
 
-    public int getIncome() {
-        return income;
-    }
 
     public void setIncome(int income) {
         this.income = income;
