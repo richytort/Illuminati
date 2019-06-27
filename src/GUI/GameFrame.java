@@ -1,35 +1,56 @@
 package GUI;
 
+import Game.Deck;
 import Game.Player;
+import framework.Texture;
+
 import java.awt.Canvas;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferStrategy;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
 import java.util.Random;
 
+import static GUI.ID.Block;
+
 public class GameFrame extends JFrame implements Runnable {
-    private JPanel panel ;
+    private boolean running = false ;
+    private Thread thread ;
+    protected static final int WIDTH = 1080;
+    protected static final int HEIGHT = WIDTH / 12 * 9 ;
+    private BufferedImage board ;
+
     private Player one;
     private Player two ;
 
-    private final int WIDTH = 1080, HEIGHT = WIDTH / 12 * 9 ;
 
-    private Thread thread ;
-    private boolean running = false ;
+    static Texture tex;
 
     private Handler handler ;
 
+    private Deck deck ;
 
 
     public GameFrame(Player one , Player two ){
         this.one = one ;
         this.two = two ;
-        handler = new Handler();
-        Random r = new Random();
-        for(int i = 0 ; i < 50 ;i++){
-            handler.addObject(new GUICard(r.nextInt(WIDTH), r.nextInt(HEIGHT), ID.PlayerOneCard));
-
+        try {
+            this.deck = new Deck();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+        //handler = new Handler();
+        init();
+        this.addKeyListener(new KeyInput(this.handler));
+        this.addMouseListener(new MouseInput(this.handler));
+        this.addMouseMotionListener( new MouseInput(this.handler));
+
+        handler.addObject(new GUICard(WIDTH/2 - 32, HEIGHT /2 -32, 0, ID.PlayerOneCard));
+        handler.addObject(new GUICard(WIDTH/2 - 0, HEIGHT /2 -0, 1, ID.PlayerOneCard));
+
+        //handler.addObject(new GUICard(WIDTH/2 + 64, HEIGHT /2 -32, ID.PlayerTwoCard));
+
 
         this.setTitle("Illuminati Game!");
         this.setSize(WIDTH, HEIGHT);
@@ -39,12 +60,31 @@ public class GameFrame extends JFrame implements Runnable {
         this.start();
     }
 
+    public void init(){
 
+        try {
+            tex = new Texture();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        BufferedImageLoader loader = new BufferedImageLoader();
+        board = loader.loadImage("Board.png"); //loading the board
+
+        handler = new Handler();
+
+        loadImageLevel(board);
+        //handler.addObject(new GUICard(100, 100, ID.PlayerOneCard));
+
+        //handler.createBoard();
+    }
 
     public synchronized void start(){
+        if(running)
+            return;
+        running = true ;
         thread = new Thread(this);
         thread.start() ;
-        running = true ;
     }
 
     public synchronized void stop(){
@@ -58,6 +98,8 @@ public class GameFrame extends JFrame implements Runnable {
 
     public void run()
     {
+        //init();
+        this.requestFocus();
         long lastTime = System.nanoTime();
         double amountOfTicks = 60.0;
         double ns = 1000000000 / amountOfTicks;
@@ -94,20 +136,44 @@ public class GameFrame extends JFrame implements Runnable {
     private void render(){
         BufferStrategy bs = this.getBufferStrategy();
         if(bs == null){
-            System.out.println("In Null");
             this.createBufferStrategy(3);
             return;
         }
 
         Graphics g = bs.getDrawGraphics();
-
-        g.setColor(Color.blue);
+        ///////////////////////////////////DRAW UNDER
+        g.setColor(Color.black);
         g.fillRect(0,0, WIDTH, HEIGHT);
 
         handler.render(g);
 
+
+        /////////////////////////////////////DRAW UPPER
         g.dispose();
         bs.show();
+    }
+
+    private void loadImageLevel(BufferedImage image){
+        int w = image.getWidth();
+        int h = image.getHeight();
+
+        System.out.println("width, height: " + w + " " + h );
+
+        for(int xx = 0 ; xx < h; xx++ ){
+            for( int yy = 0 ; yy < w; yy++){
+                int pixel = image.getRGB(xx, yy);
+                int red = (pixel >> 16) & 0xff;
+                int green = (pixel >> 8) & 0xff;
+                int blue = (pixel)& 0xff;
+
+                if( red == 255  && green == 255 && blue == 255) handler.addObject(new Block(xx* 32, yy * 32, ID.Block));
+
+            }
+        }
+    }
+
+    public static Texture getInstance(){
+        return tex;
     }
 
 }

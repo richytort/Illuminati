@@ -1,14 +1,15 @@
 package GUI;
-
+import GUI.GameFrame;
 import java.awt.*;
 import java.util.LinkedList;
 
 public class Handler {
     LinkedList<GameObject> object = new LinkedList<GameObject>();
+    private GameObject tempObject;
 
     public void tick(){
         for(int i = 0 ; i < object.size(); i++){
-            GameObject tempObject = object.get(i);
+            tempObject = object.get(i);
 
             tempObject.tick();
         }
@@ -29,5 +30,13 @@ public class Handler {
 
     public void removeObject(GameObject object){
         this.object.remove(object);
+    }
+
+    public void createBoard(){
+        for(int xx = 0 ; xx < GameFrame.WIDTH + 64; xx+= 64){
+            addObject(new Block(xx, GameFrame.HEIGHT - 96 , ID.Block ));
+
+        }
+
     }
 }
