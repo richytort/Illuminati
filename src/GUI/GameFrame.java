@@ -13,8 +13,6 @@ import static GUI.ID.Block;
 public class GameFrame extends JFrame implements Runnable {
     private boolean running = false ;
     private Thread thread ;
-    protected static final int WIDTH = 1080;
-    protected static final int HEIGHT = WIDTH / 12 * 9 ;
 
     private BufferedImage board ;
 
@@ -43,7 +41,7 @@ public class GameFrame extends JFrame implements Runnable {
 
 
         this.setTitle("Illuminati Game!");
-        this.setSize(WIDTH, HEIGHT);
+        this.setSize(800, 600);
         this.setVisible(true);
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -53,13 +51,14 @@ public class GameFrame extends JFrame implements Runnable {
     public void init(){
 
         BufferedImageLoader loader = new BufferedImageLoader();
-        board = loader.loadImage("/Board.png"); //loading the board
+        board = loader.loadImage("Board.png"); //loading the board
 
         handler = new Handler();
 
-        handler.addObject(new GUICard(100, 100, ID.PlayerOneCard));
+        loadImageLevel(board);
+        //handler.addObject(new GUICard(100, 100, ID.PlayerOneCard));
 
-        handler.createBoard();
+        //handler.createBoard();
     }
 
     public synchronized void start(){
@@ -134,6 +133,25 @@ public class GameFrame extends JFrame implements Runnable {
         /////////////////////////////////////DRAW UPPER
         g.dispose();
         bs.show();
+    }
+
+    private void loadImageLevel(BufferedImage image){
+        int w = image.getWidth();
+        int h = image.getHeight();
+
+        System.out.println("width, height: " + w + " " + h );
+
+        for(int xx = 0 ; xx < h; xx++ ){
+            for( int yy = 0 ; yy < w; yy++){
+                int pixel = image.getRGB(xx, yy);
+                int red = (pixel >> 16) & 0xff;
+                int green = (pixel >> 8) & 0xff;
+                int blue = (pixel)& 0xff;
+
+                if( red == 255  && green == 255 && blue == 255) handler.addObject(new Block(xx* 32, yy * 32, ID.Block));
+
+            }
+        }
     }
 
 }

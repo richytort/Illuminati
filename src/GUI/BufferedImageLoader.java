@@ -2,6 +2,7 @@ package GUI;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.IOException;
 
 public class BufferedImageLoader {
@@ -9,7 +10,7 @@ public class BufferedImageLoader {
 
     public BufferedImage loadImage(String path){
         try {
-            image = ImageIO.read(getClass().getResource(path));
+            image = ImageIO.read(new File(path));
         } catch (IOException e) {
             e.printStackTrace();
         }
