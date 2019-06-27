@@ -10,8 +10,7 @@ public class GUICard extends GameObject {
     public GUICard(int x, int y, ID id) {
         super(x, y, id);
 
-        velX = r.nextInt(5) + 1 ;
-        velY = r.nextInt(5);
+
     }
 
 
@@ -21,8 +20,11 @@ public class GUICard extends GameObject {
     }
 
     public void render(Graphics g) {
-        g.setColor(Color.white);
-        g.fillRect(x, y, 32, 32);
+        //if(id == ID.PlayerOneCard)
+            g.setColor(Color.white);
+        //else
+            //g.setColor(Color.red);
+            g.fillRect(x, y, 32, 32);
     }
 
 

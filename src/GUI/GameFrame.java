@@ -25,11 +25,13 @@ public class GameFrame extends JFrame implements Runnable {
         this.one = one ;
         this.two = two ;
         handler = new Handler();
-        Random r = new Random();
-        for(int i = 0 ; i < 50 ;i++){
-            handler.addObject(new GUICard(r.nextInt(WIDTH), r.nextInt(HEIGHT), ID.PlayerOneCard));
+        this.addKeyListener(new KeyInput(handler));
+        this.addMouseListener(new MouseInput(handler));
+        this.addMouseMotionListener( new MouseInput(handler));
 
-        }
+        handler.addObject(new GUICard(WIDTH/2 - 32, HEIGHT /2 -32, ID.PlayerOneCard));
+        //handler.addObject(new GUICard(WIDTH/2 + 64, HEIGHT /2 -32, ID.PlayerTwoCard));
+
 
         this.setTitle("Illuminati Game!");
         this.setSize(WIDTH, HEIGHT);
@@ -81,7 +83,7 @@ public class GameFrame extends JFrame implements Runnable {
             if(System.currentTimeMillis() - timer > 1000)
             {
                 timer += 1000;
-                System.out.println("FPS: "+ frames);
+                //System.out.println("FPS: "+ frames);
                 frames = 0;
             }
         }
@@ -94,7 +96,6 @@ public class GameFrame extends JFrame implements Runnable {
     private void render(){
         BufferStrategy bs = this.getBufferStrategy();
         if(bs == null){
-            System.out.println("In Null");
             this.createBufferStrategy(3);
             return;
         }
