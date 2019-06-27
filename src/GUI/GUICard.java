@@ -24,9 +24,10 @@ public class GUICard extends GameObject {
 
     public void render(Graphics g) {
         if(type == 0 ) //Front card image
-            g.drawImage(tex.card[0], x, y, null);
+            //(image,  x, y, width: scales image, height, scales image, null)
+            g.drawImage(tex.card[0], x, y, 64, 48, null);
         if(type == 1 ) // back card image
-            g.drawImage(tex.card[1], x, y, null);
+            g.drawImage(tex.card[1], x, y, 64, 48, null);
     }
 
     public Rectangle getBounds() {
