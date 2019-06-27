@@ -603,6 +603,7 @@ public class Deck {
         oTemp= new otherGroups("Yuppies", ImageIO.read(new File("Yuppies.png")), ImageIO.read(new File ("RegBack.png")), "other groups", "none",
                 1, 1, 4, 5,false, false, true, false, false, true, align83);
     }
+
     public void shuffle(){
         Collections.shuffle(deck);
     }
@@ -610,6 +611,9 @@ public class Deck {
     public void drawCard(){
         deck.get(0);
         deck.remove(0);
+    }
+    public ArrayList<Card> getDeck(){
+        return deck;
     }
 
     public void drawIlluminati(){

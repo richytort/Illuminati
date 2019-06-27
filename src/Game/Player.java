@@ -41,15 +41,33 @@ public class Player {
         }
         return income;
     }
+    public Card getCard(int i){
+        Card card =cards.get(i);
+        return card;
+    }
+    public void printCard(){
+        for(Card e : cards){
+            System.out.println(e + " ");
+        }
+    }
+    public void removeGroup(int e){
+        cards.remove(e);
+    }
+    public void addGroup(Card e){
+        cards.add(e);
+    }
 
     public void action(String action){
         if(action == "regular action"){ //regular action
+            System.out.println("1.Attack a group. \n 2.Transfer Money. \n 3.Move a group. \n 4.Give a group away");
             System.out.println("What type of Regular Action do you want to take?");
-            String regularA = in.nextLine().toLowerCase();
+            int regularA = in.nextInt();
+            regularAction(regularA);
             turn = true;
         }else if(action =="free action"){ //free action
+            System.out.println("1. Dropping group.\n2. Aiding an attack. \n 3.Giving away a special card. \n 4. Giving away money. \n 5.Using a special card ");
             System.out.println("What type of free Action do you want to take?");
-            String freeA = in.nextLine().toLowerCase();
+            int freeA = in.nextInt();
             freeAction(freeA);
             turn = true;
         }else if(action == "passing"){ //passing
@@ -57,20 +75,45 @@ public class Player {
             income = getIncome() + 5;
         }
     }
+    public void regularAction(int regularAction){
+        if(regularAction == 1){//attack a group
+            System.out.println("1.Attack to control. \n 2.Attack to neutralize. \n 3.Attack to destroy.");
+            int attackD = in.nextInt();
+            attackGroup(attackD);
+        }else if(regularAction ==2){ //transfer money
 
-    public void freeAction(String freeAction){
-        if(freeAction == "dropping groups"){ //dropping groups
-            System.out.println("What group do you want to drop?");
-            String group = in.nextLine().toLowerCase();
-            cards.remove(group);
-        }else if(freeAction == "aiding an attack"){ //aiding an attack
+        }else if(regularAction == 3){ //move a group
 
-        }else if(freeAction == "giving away a special card"){ //giving away a special card
-
-        }else if(freeAction == "giving away money"){ //giving away money
+        }else if (regularAction == 4){ //give a group away
 
         }
-        else if(freeAction == "using a special card"){ //using a special card
+    }
+
+    public void attackGroup(int decision){
+        if(decision == 1){ //attack to control
+
+        }if(decision == 2){ //attack to neutralize
+
+        }if(decision == 3){ //attack to destroy
+
+        }
+    }
+
+    public void freeAction(int freeAction){
+        if(freeAction == 1){ //dropping groups
+            printCard();
+            System.out.println("What group do you want to drop?");
+            int group = in.nextInt();
+            removeGroup(group);
+        }else if(freeAction == 2){ //aiding an attack
+
+        }else if(freeAction == 3){ //giving away a special card
+
+        }else if(freeAction == 4){ //giving away money
+            System.out.println("How much money do you want to transfer?");
+            int transfer = in.nextInt();
+        }
+        else if(freeAction == 5){ //using a special card
             System.out.println("What special card would you like to use?");
             String specialCard = in.nextLine().toLowerCase();
             specialCard(specialCard);
@@ -78,13 +121,33 @@ public class Player {
     }
 
     public void specialCard(String specialCard){
-        if(specialCard == ""){
+        if(specialCard == "assassination"){
 
-        }else if(){
+        }else if(specialCard== "bribery"){
 
-        }else if(){
+        }else if(specialCard == "computer espionage"){
 
-        }else if(){
+        }else if(specialCard == "deep agent "){
+
+        } else if(specialCard== "interference"){
+
+        }else if(specialCard == "Market manipulation "){
+
+        }else if(specialCard== "media campaign"){
+
+        }else if(specialCard == "murphy's law"){
+
+        }else if(specialCard == "secrets man was not meant to know "){
+
+        }else if(specialCard== "senate investigating committee"){
+
+        }else if(specialCard == "slush fund"){
+
+        }else if(specialCard == "swiss bank account"){
+
+        }else if(specialCard== "whispering campaign"){
+
+        }else if(specialCard == "white collar crime"){
 
         }
     }
