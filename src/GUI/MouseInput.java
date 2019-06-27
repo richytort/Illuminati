@@ -42,10 +42,8 @@ public class MouseInput extends MouseAdapter {
     }
 
     public void mouseDragged(MouseEvent e){
-        System.out.println("DRAGGD");
         for(int i = 0 ; i < handler.object.size(); i++){
             GameObject tempObject = handler.object.get(i);
-            System.out.println("CHECK");
             if(tempObject.getId() == ID.PlayerOneCard) {
                 //key events for player 1
                 if (       ( e.getX() <= tempObject.getX() + 32  && e.getX() >= tempObject.getX()  )

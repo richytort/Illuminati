@@ -5,23 +5,27 @@ import java.awt.Canvas;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferStrategy;
+import java.awt.image.BufferedImage;
 import java.util.Random;
 
 import static GUI.ID.Block;
 
 public class GameFrame extends JFrame implements Runnable {
-    private JPanel panel ;
-    private Player one;
-    private Player two ;
-
+    private boolean running = false ;
+    private Thread thread ;
     protected static final int WIDTH = 1080;
     protected static final int HEIGHT = WIDTH / 12 * 9 ;
 
-    private Thread thread ;
-    private boolean running = false ;
+    private BufferedImage board ;
+
+    private Player one;
+    private Player two ;
+
+
+
 
     private Handler handler ;
-    Random r = new Random();
+
 
 
 
@@ -47,10 +51,14 @@ public class GameFrame extends JFrame implements Runnable {
     }
 
     public void init(){
+
+        BufferedImageLoader loader = new BufferedImageLoader();
+        board = loader.loadImage("/Board.png"); //loading the board
+
         handler = new Handler();
-        //for(int i = 0 ; i < 50 ; i++)
-        //    handler.addObject(new Block(r.nextInt(800), r.nextInt(600), ID.Block));
-        handler.addObject(new GUICard(r.nextInt(800), r.nextInt(600), ID.PlayerOneCard));
+
+        handler.addObject(new GUICard(100, 100, ID.PlayerOneCard));
+
         handler.createBoard();
     }
 
@@ -117,7 +125,7 @@ public class GameFrame extends JFrame implements Runnable {
 
         Graphics g = bs.getDrawGraphics();
         ///////////////////////////////////DRAW UNDER
-        g.setColor(Color.blue);
+        g.setColor(Color.black);
         g.fillRect(0,0, WIDTH, HEIGHT);
 
         handler.render(g);
