@@ -13,7 +13,8 @@ import static GUI.ID.Block;
 public class GameFrame extends JFrame implements Runnable {
     private boolean running = false ;
     private Thread thread ;
-
+    protected static final int WIDTH = 1080;
+    protected static final int HEIGHT = WIDTH / 12 * 9 ;
     private BufferedImage board ;
 
     private Player one;
@@ -36,12 +37,12 @@ public class GameFrame extends JFrame implements Runnable {
         this.addMouseListener(new MouseInput(this.handler));
         this.addMouseMotionListener( new MouseInput(this.handler));
 
-        //handler.addObject(new GUICard(WIDTH/2 - 32, HEIGHT /2 -32, ID.PlayerOneCard));
+        handler.addObject(new GUICard(WIDTH/2 - 32, HEIGHT /2 -32, ID.PlayerOneCard));
         //handler.addObject(new GUICard(WIDTH/2 + 64, HEIGHT /2 -32, ID.PlayerTwoCard));
 
 
         this.setTitle("Illuminati Game!");
-        this.setSize(800, 600);
+        this.setSize(WIDTH, HEIGHT);
         this.setVisible(true);
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

@@ -22,11 +22,11 @@ public class Block extends GameObject {
     public void render(Graphics g) {
         g.setColor(Color.white);
 
-        g.drawRect((int)x, (int)y, 64, 64);
+        g.drawRect((int)x, (int)y, 32, 32);
     }
 
     public Rectangle getBounds(){
-        return new Rectangle(x , y , 64 , 64 );
+        return new Rectangle(x , y , 32 , 32 );
     }
 
 
